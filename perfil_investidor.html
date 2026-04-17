@@ -1,0 +1,231 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F3F3F3;font-family:Arial,sans-serif;padding:32px 16px}
+.wrap{max-width:700px;margin:0 auto}
+.hdr{background:#0C769E;border-radius:12px 12px 0 0;padding:32px 40px;text-align:center}
+.hdr h1{color:#fff;font-size:22px;font-weight:bold}
+.hdr p{color:#DAEEF3;font-size:13px;margin-top:6px}
+.linha-sep{height:3px;background:#31AFBE;width:100%}
+.steps{display:flex;background:#F3F3F3;padding:0}
+.step{flex:1;text-align:center;font-size:13px;color:#888;padding:14px 8px;background:#F3F3F3;border-bottom:3px solid transparent;cursor:default;font-weight:500}
+.step.on{color:#0C769E;font-weight:bold;background:#DAEEF3;border-bottom:3px solid #0C769E}
+.card{background:#fff;border-radius:0 0 12px 12px;padding:36px 40px 40px}
+.intro-box{background:#DAEEF3;border-left:4px solid #0C769E;border-radius:8px;padding:18px 22px;margin-bottom:28px}
+.intro-box p{color:#0C769E;font-size:14px;line-height:1.8}
+.obrig{color:#C0392B;font-size:13px;margin-bottom:24px;display:block}
+.fld{margin-bottom:22px}
+.fld label{display:block;font-size:15px;color:#333;font-weight:bold;margin-bottom:7px}
+.fld label span{color:#C0392B}
+.fld input{width:100%;padding:13px 16px;border:1.5px solid #ccc;border-radius:8px;font-size:15px;color:#222;outline:none;transition:border-color 0.2s}
+.fld input:focus{border-color:#0C769E}
+.fld input.erro{border-color:#C0392B}
+.err{color:#C0392B;font-size:12px;margin-top:4px;display:none}
+.sec-t{font-size:19px;font-weight:bold;color:#0C769E;margin-bottom:20px}
+.sec-d{background:#DAEEF3;border-left:4px solid #0C769E;border-radius:8px;padding:18px 22px;margin-bottom:28px}
+.sec-d p{color:#0C769E;font-size:14px;line-height:1.8}
+.prg{margin-bottom:26px}
+.enu{font-size:15px;color:#222;font-weight:bold;margin-bottom:12px;line-height:1.6}
+.enu span{color:#C0392B}
+.opc{display:flex;align-items:flex-start;gap:10px;margin-bottom:9px}
+.opc input{margin-top:3px;accent-color:#0C769E;width:17px;height:17px;flex-shrink:0;cursor:pointer}
+.opc label{font-size:15px;color:#444;line-height:1.6;cursor:pointer;transition:color 0.15s}
+.opc:hover label{color:#0C769E}
+.aviso{background:#FFF3E0;border-left:4px solid #E65100;border-radius:8px;padding:18px 22px;margin:28px 0}
+.aviso p{color:#774400;font-size:14px;line-height:1.8}
+.btn-row{display:flex;gap:12px;margin-top:8px}
+.btn{flex:1;background:#0C769E;color:#fff;border:none;border-radius:8px;padding:15px;font-size:15px;font-weight:bold;cursor:pointer;transition:background 0.2s}
+.btn:hover{background:#085d7f}
+.btn:disabled{background:#aaa;cursor:not-allowed}
+.btn-v{background:#fff;color:#0C769E;border:2px solid #0C769E;border-radius:8px;padding:13px 20px;font-size:15px;font-weight:bold;cursor:pointer;flex:0 0 auto;transition:background 0.2s}
+.btn-v:hover{background:#DAEEF3}
+.suc{text-align:center;padding:44px 0}
+.ico{width:80px;height:80px;border-radius:50%;background:#DAEEF3;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:36px;color:#0C769E;font-weight:bold}
+.suc h2{font-size:24px;color:#222;margin-bottom:20px}
+.suc .dest{font-size:15px;font-weight:bold;color:#0C769E;margin-bottom:16px}
+.legal{background:#F3F3F3;border-radius:8px;padding:16px 20px;margin-top:16px;font-size:13px;color:#777;line-height:1.7;text-align:left}
+.ftr{text-align:center;margin-top:12px;padding-bottom:8px}
+.ftr p{font-size:12px;color:#999}
+@media(max-width:480px){.hdr,.card{padding:24px 20px}.steps .step{font-size:11px;padding:12px 4px}}
+</style>
+
+<div class="wrap">
+  <div class="hdr">
+    <h1>Consultoria de Investimentos</h1>
+    <p>Daiane J. Silva &mdash; Planejadora Financeira &middot; CEA | CVM</p>
+  </div>
+  <div class="linha-sep"></div>
+  <div class="steps">
+    <div class="step on" id="s1">1. Identificação</div>
+    <div class="step" id="s2">2. Perfil do Investidor</div>
+    <div class="step" id="s3">3. Conclusão</div>
+  </div>
+
+  <!-- ETAPA 1 -->
+  <div class="card" id="e1">
+    <div class="intro-box">
+      <p>Especialista em Investimentos AMBIMA (CEA) e Consultora de Valores Mobiliários (CVM). Mais de R$ 25 milhões geridos e 400 famílias orientadas pelo planejamento financeiro, com estratégias personalizadas, éticas e transparência alinhadas aos objetivos e ao perfil de cada cliente.</p>
+      <p style="margin-top:8px">Análise e recomendação de investimentos de forma independente.</p>
+    </div>
+    <span class="obrig">* Indica uma pergunta obrigatória</span>
+    <div class="fld">
+      <label>Nome Completo <span>*</span></label>
+      <input type="text" id="nome" placeholder="Seu nome completo">
+      <div class="err" id="en">Campo obrigatório</div>
+    </div>
+    <div class="fld">
+      <label>CPF <span>*</span></label>
+      <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+      <div class="err" id="ec">CPF inválido</div>
+    </div>
+    <div class="fld">
+      <label>E-mail <span>*</span></label>
+      <input type="email" id="email" placeholder="seu@email.com">
+      <div class="err" id="ee">E-mail inválido</div>
+    </div>
+    <div class="btn-row"><button class="btn" onclick="ir2()">Continuar →</button></div>
+  </div>
+
+  <!-- ETAPA 2 -->
+  <div class="card" id="e2" style="display:none">
+    <div class="sec-t">API — Análise de Perfil do Investidor</div>
+    <div class="sec-d">
+      <p>A análise do perfil de investidor tem como objetivo compreender seus objetivos financeiros, nível de conhecimento e tolerância ao risco, a fim de identificar o perfil mais adequado, que pode ser classificado como conservador, moderado ou arrojado.</p>
+      <p style="margin-top:8px">Esse processo é fundamental para garantir que a estratégia de investimentos e as recomendações de carteira estejam alinhadas à sua realidade, expectativas e capacidade de assumir riscos.</p>
+    </div>
+
+    <div class="prg">
+      <div class="enu">1. Qual é o seu principal objetivo ao investir o seu patrimônio? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p1" value="Preservar o patrimônio, assumindo menor nível de risco"><label>Preservar o patrimônio, assumindo menor nível de risco</label></div>
+      <div class="opc"><input type="radio" name="p1" value="Buscar uma combinação entre preservação do patrimônio e sua valorização"><label>Buscar uma combinação entre preservação do patrimônio e sua valorização</label></div>
+      <div class="opc"><input type="radio" name="p1" value="Maximizar o potencial de retorno, assumindo maior nível de risco"><label>Maximizar o potencial de retorno, assumindo maior nível de risco</label></div>
+      <div class="err" id="ep1">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">2. Por quanto tempo você pretende manter seus recursos investidos? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p2" value="Curto prazo (até 2 anos)"><label>Curto prazo (até 2 anos)</label></div>
+      <div class="opc"><input type="radio" name="p2" value="Médio prazo (de 2 a 5 anos)"><label>Médio prazo (de 2 a 5 anos)</label></div>
+      <div class="opc"><input type="radio" name="p2" value="Longo prazo (acima de 5 anos)"><label>Longo prazo (acima de 5 anos)</label></div>
+      <div class="err" id="ep2">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">3. Em quais dos investimentos abaixo você investiu nos últimos 5 anos? <span>*</span></div>
+      <div class="opc"><input type="checkbox" name="p3" value="Poupança, Fundos DI, CDB, Fundos de Renda Fixa"><label>Poupança, Fundos DI, CDB, Fundos de Renda Fixa</label></div>
+      <div class="opc"><input type="checkbox" name="p3" value="Fundos Multimercado, Títulos Públicos, LCI, LCA"><label>Fundos Multimercado, Títulos Públicos, LCI, LCA</label></div>
+      <div class="opc"><input type="checkbox" name="p3" value="Fundos de Ações, Ações, Fundos Imobiliários, Debêntures, Fundos Cambiais"><label>Fundos de Ações, Ações, Fundos Imobiliários, Debêntures, Fundos Cambiais</label></div>
+      <div class="opc"><input type="checkbox" name="p3" value="Fundos de Investimento em Participações (FIP), Derivativos (Futuros, Opções e Swaps)"><label>Fundos de Investimento em Participações (FIP), Derivativos (Futuros, Opções e Swaps)</label></div>
+      <div class="err" id="ep3">Selecione ao menos uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">4. Considerando oscilações de mercado, imagine que seus investimentos sofram uma queda de 10% em relação ao valor aplicado. Nesse cenário, qual seria sua atitude? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p4" value="Não saberia como agir"><label>Não saberia como agir</label></div>
+      <div class="opc"><input type="radio" name="p4" value="Resgataria totalmente os investimentos"><label>Resgataria totalmente os investimentos</label></div>
+      <div class="opc"><input type="radio" name="p4" value="Manteria a posição, aguardando recuperação"><label>Manteria a posição, aguardando recuperação</label></div>
+      <div class="opc"><input type="radio" name="p4" value="Avaliaria a possibilidade de aumentar a posição"><label>Avaliaria a possibilidade de aumentar a posição</label></div>
+      <div class="err" id="ep4">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">5. Qual é a principal natureza dos seus recursos financeiros? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p5" value="Salário (CLT)"><label>Salário (CLT)</label></div>
+      <div class="opc"><input type="radio" name="p5" value="Pró-labore"><label>Pró-labore</label></div>
+      <div class="opc"><input type="radio" name="p5" value="Distribuição de lucros"><label>Distribuição de lucros</label></div>
+      <div class="opc"><input type="radio" name="p5" value="Renda como autônomo ou profissional liberal"><label>Renda como autônomo ou profissional liberal</label></div>
+      <div class="opc"><input type="radio" name="p5" value="Renda de investimentos (juros, dividendos, aluguéis)"><label>Renda de investimentos (juros, dividendos, aluguéis)</label></div>
+      <div class="opc"><input type="radio" name="p5" value="Aposentadoria ou pensão"><label>Aposentadoria ou pensão</label></div>
+      <div class="err" id="ep5">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">6. Qual percentual da sua renda você investe regularmente? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p6" value="Até 10%"><label>Até 10%</label></div>
+      <div class="opc"><input type="radio" name="p6" value="De 10% a 20%"><label>De 10% a 20%</label></div>
+      <div class="opc"><input type="radio" name="p6" value="Acima de 20%"><label>Acima de 20%</label></div>
+      <div class="err" id="ep6">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">7. Em relação aos seus investimentos, qual é a necessidade dos recursos aplicados? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p7" value="Não tenho necessidade imediata de utilização desses recursos"><label>Não tenho necessidade imediata de utilização desses recursos</label></div>
+      <div class="opc"><input type="radio" name="p7" value="Eventualmente posso precisar utilizar parte dos recursos"><label>Eventualmente posso precisar utilizar parte dos recursos</label></div>
+      <div class="opc"><input type="radio" name="p7" value="Utilizo este valor como complemento de renda"><label>Utilizo este valor como complemento de renda</label></div>
+      <div class="err" id="ep7">Selecione uma opção</div>
+    </div>
+    <div class="prg">
+      <div class="enu">8. Com que periodicidade você costuma realizar investimentos ou aportes financeiros? <span>*</span></div>
+      <div class="opc"><input type="radio" name="p8" value="Mensal"><label>Mensal</label></div>
+      <div class="opc"><input type="radio" name="p8" value="Trimestral ou semestral"><label>Trimestral ou semestral</label></div>
+      <div class="opc"><input type="radio" name="p8" value="Anual ou eventual"><label>Anual ou eventual</label></div>
+      <div class="err" id="ep8">Selecione uma opção</div>
+    </div>
+
+    <div class="aviso">
+      <p>A Análise do Perfil do Investidor (API) é obrigatória conforme a Resolução CVM nº 30/2021. Nenhuma recomendação pode ser realizada sem o perfil previamente definido e válido. A API deve ser atualizada periodicamente, no mínimo a cada 24 meses ou sempre que houver mudança relevante na situação do investidor.</p>
+      <p style="margin-top:8px">Para finalizar, clique em enviar.</p>
+    </div>
+    <div class="btn-row">
+      <button class="btn-v" onclick="ir1()">← Voltar</button>
+      <button class="btn" id="btn-env" onclick="enviar()">Enviar</button>
+    </div>
+  </div>
+
+  <!-- ETAPA 3 -->
+  <div class="card" id="e3" style="display:none">
+    <div class="suc">
+      <div class="ico">✓</div>
+      <h2>Análise Concluída!</h2>
+      <p class="dest">Em breve você receberá seu resultado por e-mail.</p>
+      <div class="legal"><strong>Aviso legal:</strong> As informações fornecidas são utilizadas exclusivamente para a classificação do perfil de investidor e elaboração de recomendações personalizadas. Seus dados são tratados com total sigilo e não serão compartilhados com terceiros.</div>
+    </div>
+  </div>
+
+  <div class="ftr"><p>Daiane Jaqueline da Silva Soares &middot; Planejadora Financeira &middot; CEA | CVM &middot; SLV Estratégia Financeira</p></div>
+</div>
+
+<script>
+document.getElementById('cpf').addEventListener('input',function(){
+  let v=this.value.replace(/\D/g,'').substring(0,11);
+  if(v.length>9)v=v.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,'$1.$2.$3-$4');
+  else if(v.length>6)v=v.replace(/(\d{3})(\d{3})(\d{3})/,'$1.$2.$3');
+  else if(v.length>3)v=v.replace(/(\d{3})(\d{3})/,'$1.$2');
+  this.value=v;
+});
+function ativar(n){
+  [1,2,3].forEach(i=>{
+    document.getElementById('s'+i).className='step'+(i===n?' on':'');
+    document.getElementById('e'+i).style.display=i===n?'block':'none';
+  });
+  window.scrollTo(0,0);
+}
+function ir1(){ativar(1);}
+function ir2(){
+  let ok=true;
+  const nome=document.getElementById('nome').value.trim();
+  const cpf=document.getElementById('cpf').value.trim();
+  const email=document.getElementById('email').value.trim();
+  document.getElementById('en').style.display=nome?'none':'block';if(!nome)ok=false;
+  document.getElementById('ec').style.display=cpf.replace(/\D/g,'').length===11?'none':'block';if(cpf.replace(/\D/g,'').length!==11)ok=false;
+  document.getElementById('ee').style.display=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)?'none':'block';if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))ok=false;
+  if(ok)ativar(2);
+}
+function radio(n){const s=document.querySelector('input[name="'+n+'"]:checked');return s?s.value:'';}
+function checks(n){return Array.from(document.querySelectorAll('input[name="'+n+'"]:checked')).map(s=>s.value).join(', ');}
+function enviar(){
+  let ok=true;
+  ['p1','p2','p3','p4','p5','p6','p7','p8'].forEach(p=>{
+    const val=p==='p3'?checks(p):radio(p);
+    document.getElementById('ep'+p.slice(1)).style.display=val?'none':'block';
+    if(!val)ok=false;
+  });
+  if(!ok)return;
+  const btn=document.getElementById('btn-env');
+  btn.disabled=true;btn.textContent='Enviando...';
+  const d={
+    nome:document.getElementById('nome').value.trim(),
+    cpf:document.getElementById('cpf').value.trim(),
+    email:document.getElementById('email').value.trim(),
+    p1:radio('p1'),p2:radio('p2'),p3:checks('p3'),
+    p4:radio('p4'),p5:radio('p5'),p6:radio('p6'),
+    p7:radio('p7'),p8:radio('p8')
+  };
+  const URL='COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+  fetch(URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+  .then(()=>ativar(3)).catch(()=>ativar(3));
+}
+</script>
