@@ -12,7 +12,7 @@ body{background:#F3F3F3;font-family:Arial,sans-serif;padding:32px 16px}
 .card{background:#fff;border-radius:0 0 12px 12px;padding:36px 40px 40px}
 .intro-box{background:#DAEEF3;border-left:4px solid #0C769E;border-radius:8px;padding:18px 22px;margin-bottom:28px}
 .intro-box p{color:#0C769E;font-size:14px;line-height:1.8}
-.obrig{color:#C0392B;font-size:13px;margin-bottom:24px;display:block}
+.obrig{color:#C0392B;font-size:13px;margin-bottom:24px;display:block}h
 .fld{margin-bottom:22px}
 .fld label{display:block;font-size:15px;color:#333;font-weight:bold;margin-bottom:7px}
 .fld label span{color:#C0392B}
@@ -224,7 +224,7 @@ function enviar(){
     p4:radio('p4'),p5:radio('p5'),p6:radio('p6'),
     p7:radio('p7'),p8:radio('p8')
   };
-  const URL='COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+  const URL='https://script.google.com/macros/s/AKfycbwImThMAGJNDKtZg82cSnTqX1DaeT1xOovbqRtfOs6W8CO3nuj0YGCffoywNBaxp_Q_/exec';
   fetch(URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
   .then(()=>ativar(3)).catch(()=>ativar(3));
 }
