@@ -1,4 +1,4 @@
-<style>
+<style> 
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#F3F3F3;font-family:Arial,sans-serif;padding:32px 16px}
 .wrap{max-width:700px;margin:0 auto}
